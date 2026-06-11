@@ -1,0 +1,116 @@
+/* --- Style global --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc;
+    /* Beige clair */
+    color: #333;
+    /* Texte noir doux */
+    line-height: 1.6;
+}
+
+/* --- En-tête --- */
+header {
+    background-color: #fff;
+    /* Blanc pur */
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    /* Blanc légèrement gris */
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #d2b48c;
+    /* Beige foncé (teinte taupe) */
+    border-radius: 5px;
+}
+
+/* --- Section principale --- */
+main {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* --- Titres de section --- */
+h2 {
+    color: #d2b48c;
+    /* Beige foncé */
+    border-bottom: 2px solid #f5f5dc;
+    /* Beige clair */
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* --- Pied de page --- */
+footer {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* --- Boutons --- */
+button {
+    background-color: #d2b48c;
+    /* Beige foncé */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c1a072;
+    /* Beige un peu plus foncé */
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}
+
+
+

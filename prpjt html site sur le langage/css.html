@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Présentation du Langage CSS</title>
+        <style>
+            /* Style général */
+            body {
+                font-family: 'Playfair Display', serif;
+                background-color: #f5f5dc;
+                /* Fond beige */
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background-color: #333;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5em;
+            }
+
+            /* Conteneur principal */
+            .container {
+                max-width: 1100px;
+                margin: 20px auto;
+                padding: 20px;
+            }
+
+            /* Section pour la photo du créateur */
+            .creator-photo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+
+            .creator-photo img {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+
+            /* Section pour la vidéo */
+            .video-container {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            iframe {
+                width: 100%;
+                max-width: 800px;
+                height: 450px;
+            }
+
+            /* Section pour les liens */
+            .links {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .links a {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .links a:hover {
+                background-color: #45a049;
+            }
+
+            /* Section pour la définition */
+            .definition {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .definition p {
+                font-size: 1.2em;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Présentation du Langage CSS</h1>
+        </header>
+
+        <div class="container">
+            <!-- Section définition CSS -->
+            <div class="definition">
+                <p>
+                    <strong>Définition :</strong>
+                    Le CSS (Cascading Style Sheets) est un langage utilisé pour décrire l'apparence
+                    et la mise en page des éléments HTML. Il permet de définir des styles (couleurs,
+                    polices, marges, positionnement, animations, etc.) pour rendre les pages web
+                    visuellement attrayantes et adaptées à différents appareils.
+                </p>
+            </div>
+
+            <!-- Section photo du créateur -->
+            <div class="creator-photo">
+                <h2>Tout savoir sur son créateur</h2>
+                <p>
+                    Le CSS a été créé par Håkon Wium Lie en 1994, alors qu'il travaillait au CERN
+                    avec Tim Berners-Lee. Informaticien norvégien né en 1965, il a proposé le CSS
+                    pour séparer le contenu HTML de son design. Il a contribué au développement des
+                    standards web via le W3C et a travaillé comme CTO chez Opera Software.
+                </p>
+                <img
+                    src="image et pdf/image créateur css.jpg"
+                    alt="Photo de Håkon Wium Lie"
+                    width="200"
+                    height="250">
+            </div>
+
+            <!-- Section vidéo tutoriel -->
+            <div class="video-container">
+                <h3>Vidéo tutoriel CSS</h3>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/qTN9bNaBCK8?si=Lv4COrzDP6x47WHJ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen="allowfullscreen"></iframe>
+            </div>
+
+            <!-- Citation -->
+            <p style="text-align: center; font-style: italic;">
+                "Le contenu précède le design. Le design en l'absence de contenu n'est pas du
+                design, c'est de la décoration."
+                <br>
+                – Jeffrey Zeldman
+            </p>
+
+            <!-- Section des liens -->
+            <div class="links">
+                <a href="https://www.w3schools.com/css/" target="_blank">Tutoriels CSS</a>
+                <a href="image et pdf/0056-cours-langage-css.pdf" download="CSS_Documentation.pdf">Documentation pdf</a>
+            </div>
+        </div>
+    </body>
+</html>

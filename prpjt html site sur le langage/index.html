@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page d'Accueil - Langages Web</title>
+        <style>
+            /* Style général */
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f5f5dc;
+                /* Fond beige */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+
+            header {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5em;
+                color: #333;
+            }
+
+            header p {
+                font-size: 1.2em;
+                color: #555;
+            }
+
+            /* Conteneur des bulles */
+            .bulle-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: center;
+                max-width: 1000px;
+            }
+
+            /* Style des bulles */
+            .bulle {
+                width: 180px;
+                height: 180px;
+                background-color: white;
+                /* Bulles blanches */
+                border-radius: 50%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                padding: 15px;
+                cursor: pointer;
+                text-decoration: none;
+                /* Enlever le soulignement du lien */
+            }
+
+            .bulle:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .bulle h2 {
+                margin: 0;
+                font-size: 1.3em;
+                color: #333;
+            }
+
+            .bulle p {
+                font-size: 0.9em;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <h1>Langages Web</h1>
+            <p>Explorez les langages essentiels pour le développement web</p>
+        </header>
+
+        <div class="bulle-container">
+            <!-- Bulle HTML -->
+            <a href="html.html" class="bulle">
+                <h2>HTML</h2>
+                <p>Structurer le contenu des pages web.</p>
+            </a>
+
+            <!-- Bulle CSS -->
+            <a href="css.html" class="bulle">
+                <h2>CSS</h2>
+                <p>Styliser et mettre en forme les pages web.</p>
+            </a>
+
+            <!-- Bulle PHP -->
+            <a href="php.html" class="bulle">
+                <h2>PHP</h2>
+                <p>Créer des pages web dynamiques côté serveur.</p>
+            </a>
+
+            <!-- Bulle JavaScript -->
+            <a href="javascript.html" class="bulle">
+                <h2>JavaScript</h2>
+                <p>Rendre les pages interactives et dynamiques.</p>
+            </a>
+        </div>
+
+    </body>
+</html>
+
+
