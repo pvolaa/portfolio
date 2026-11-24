@@ -1,55 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Projet 2 – Portfolio Paola</title>
-    <link rel="stylesheet" href="projet2.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Projet 2 – Portfolio Paola Conde Eyeghe</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="animations.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar" id="navbar">
+            <a class="nav-logo" href="index.html">P<span class="dot">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li>
+                    <a href="index.html#accueil">Accueil</a>
+                </li>
+                <li>
+                    <a href="index.html#competences">Compétences</a>
+                </li>
+                <li>
+                    <a href="index.html#projets">Projets</a>
+                </li>
+                <li>
+                    <a href="index.html#bts">BTS SIO</a>
+                </li>
+                <li>
+                    <a href="veille.html">Veille techno</a>
+                </li>
+                <li>
+                    <a href="cv.html">CV</a>
+                </li>
+                <li>
+                    <a href="index.html#contact">Contact</a>
+                </li>
+            </ul>
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span></button>
+        </nav>
 
-    <section class="project-header">
-        <h1>Projet 2</h1>
-        <p class="subtitle">SITE E-COMMERCE</p>
-    </section>
+        <header class="page-header">
+            <h1>Projet 2</h1>
+            <p class="subtitle">Site e-commerce de peluches</p>
+        </header>
+        <main class="page-content">
+            <h2>Description</h2>
+            <p>Ce projet est un site e-commerce, plus précisément une boutique de peluches
+                de différentes sortes, adaptées aux goûts de tout le monde. Il est développé en
+                PHP et MySQL et permet de se connecter et de faire des achats.</p>
+            <p>Il n'est pas encore totalement opérationnel, mais plusieurs fonctionnalités
+                sont déjà disponibles.</p>
 
-    <section class="project-content">
+            <h2>Fonctionnalités</h2>
+            <ul>
+                <li>Authentification des utilisateurs (connexion)</li>
+                <li>Catalogue de produits</li>
+                <li>Gestion du panier</li>
+            </ul>
 
-        <h2>Description</h2>
-        <p>
-            Ce projet est un site e-commerce, plus précisément un site de vente de peluches,
-            développé en PHP et MySQL. Il permet de se connecter et de faire des achats de
-            peluches de différentes sortes et adaptées aux goûts de tout le monde.
-        </p>
-        <p>
-            Il n'est pas encore totalement opérationnel mais plusieurs fonctionnalités sont déjà disponibles.
-        </p>
+            <h2>Technologies utilisées</h2>
+            <ul>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>HTML / CSS</li>
+                <li>JavaScript</li>
+            </ul>
 
-        <h2>Technologies utilisées</h2>
-        <ul>
-            <li>PHP</li>
-            <li>MySQL</li>
-            <li>HTML / CSS</li>
-            <li>JavaScript</li>
-        </ul>
+            <h2>Compétences mobilisées</h2>
+            <ul>
+                <li>Concevoir et développer une solution applicative</li>
+                <li>Gérer les données</li>
+                <li>Assurer la cybersécurité d'une solution applicative (authentification)</li>
+            </ul>
 
-        <!-- SECTION CAPTURES -->
-        <h2>Captures d’écran</h2>
-        <div class="gallery">
-            <img src="img/Capture d'écran 2026-06-01 153243.png" alt="Capture 1">
-            <img src="img/Capture d'écran 2026-06-02 111746.png" alt="Capture 2">
-            <img src="img/Capture d'écran 2026-06-02 114548.png" alt="Capture 3">
-        </div>
-
-
-
-
-        <!-- BOUTONS EN BAS -->
-        <div class="btn-group">
-<a href="index.html" class="btn btn-secondary">Retour au portfolio</a>
-
-        </div>
-
-    </section>
-
-</body>
+            <div class="btn-group">
+                <a href="index.html#projets" class="btn btn-secondary">Retour au portfolio</a>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <p>©
+                    <span class="year"></span>
+                    Paola Conde Eyeghe – Portfolio BTS SIO SLAM</p>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+    </body>
 </html>

@@ -1,43 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Projet 1 – Portfolio Paola</title>
-    <link rel="stylesheet" href="projet1.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Projet 1 – Portfolio Paola Conde Eyeghe</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="animations.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar" id="navbar">
+            <a class="nav-logo" href="index.html">P<span class="dot">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li>
+                    <a href="index.html#accueil">Accueil</a>
+                </li>
+                <li>
+                    <a href="index.html#competences">Compétences</a>
+                </li>
+                <li>
+                    <a href="index.html#projets">Projets</a>
+                </li>
+                <li>
+                    <a href="index.html#bts">BTS SIO</a>
+                </li>
+                <li>
+                    <a href="veille.html">Veille techno</a>
+                </li>
+                <li>
+                    <a href="cv.html">CV</a>
+                </li>
+                <li>
+                    <a href="index.html#contact">Contact</a>
+                </li>
+            </ul>
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span></button>
+        </nav>
 
-    <!-- Empêche l’icône cassée -->
-    <link rel="icon" href="data:,">
-</head>
-<body>
+        <header class="page-header">
+            <h1>Projet 1</h1>
+            <p class="subtitle">Site sur les différents types de langages</p>
+        </header>
+        <main class="page-content">
+            <h2>Description</h2>
+            <p>Ce projet est un site consacré aux langages que l'on peut utiliser en
+                programmation. On y trouve des définitions, des vidéos explicatives et des
+                images de leurs créateurs.</p>
+            <p>Il a été réalisé en 1<sup>re</sup>
+                année de BTS SIO (2024-2025) à l'école IRIS, à Paris.</p>
 
-<section class="project-header">
-    <h1>Projet 1</h1>
-    <p class="subtitle">SITE SUR LES DIFFERENTS TYPES DE LANGAGES</p>
-</section>
+            <h2>Technologies utilisées</h2>
+            <ul>
+                <li>HTML / CSS</li>
+                <li>JavaScript</li>
+            </ul>
 
-<section class="project-content">
+            <h2>Compétences mobilisées</h2>
+            <ul>
+                <li>Concevoir et développer une solution applicative</li>
+                <li>Développer la présence en ligne de l'organisation</li>
+            </ul>
 
-    <h2>Description</h2>
-    <p>
-        Ce projet est un site sur les différents langages qu'on peut utiliser lors de la programmation.
-        Il a été réalisé lors de ma 1ère année en BTS SIO (2024-2025) à l'école IRIS de Paris.
-       <br> On peut y trouver des définitions, des vidéos et des images des créateurs.
-    </p>
-
-    <h2>Technologies utilisées</h2>
-    <ul>
-        <li>HTML / CSS</li>
-        <li>JavaScript</li>
-    </ul>
-
-    <!-- BOUTONS EN BAS -->
-    <div class="btn-group">
-        <a href="prpjt html site sur le langage" class="btn" target="_blank">Ouvrir le projet</a>
-        <a href="../index.html" class="btn btn-secondary">Retour au portfolio</a>
-    </div>
-
-</section>
-
-</body>
+            <div class="btn-group">
+                <a href="index.html#projets" class="btn btn-secondary">Retour au portfolio</a>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <p>©
+                    <span class="year"></span>
+                    Paola Conde Eyeghe – Portfolio BTS SIO SLAM</p>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+    </body>
 </html>
-
