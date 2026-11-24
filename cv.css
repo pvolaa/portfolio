@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial,Helvetica,sans-serif;
+}
+body {
+    background: #e9ebf0;
+    padding: 24px;
+    color: #222;
+}
+.cv-actions {
+    max-width: 900px;
+    margin: 0 auto 16px;
+    display: flex;
+    gap: 10px;
+}
+.cv-actions a,
+.cv-actions button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #1f4e79;
+    background: #1f4e79;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+.cv-actions a.alt {
+    background: #fff;
+    color: #1f4e79;
+}
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    min-height: 1000px;
+    box-shadow: 0 0 10px rgba(0,0,0,.12);
+}
+.left-column {
+    padding: 30px 34px;
+    border-right: 2px solid #e5e5e5;
+}
+.right-column {
+    padding: 30px 34px;
+    background: #fafafa;
+}
+.header-name {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+.header-subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+.header-line {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 3px;
+}
+.header-info {
+    margin-top: 14px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+.header-info span {
+    display: block;
+}
+.section-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1f4e79;
+    margin: 24px 0 10px;
+    border-bottom: 2px solid #1f4e79;
+    padding-bottom: 3px;
+}
+.item-block {
+    margin-bottom: 14px;
+}
+.item-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+.item-subtitle {
+    font-size: 13px;
+    color: #555;
+}
+.item-date {
+    font-size: 12px;
+    color: #777;
+}
+.cv-container ul {
+    list-style: none;
+    margin-top: 5px;
+}
+.cv-container li {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 4px;
+    padding-left: 12px;
+    position: relative;
+}
+.cv-container li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1f4e79;
+}
+.atouts-list li {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.lang-item {
+    font-size: 13px;
+    color: #444;
+}
+@media (max-width:700px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+    .left-column {
+        border-right: 0;
+    }
+}
+@media print {
+    body {
+        background: #fff;
+        padding: 0;
+    }
+    .cv-actions {
+        display: none;
+    }
+    .cv-container {
+        box-shadow: none;
+    }
+}

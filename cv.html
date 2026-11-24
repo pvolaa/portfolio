@@ -1,279 +1,76 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>CV CONDE</title>
-
-  <style>
-    /* ============================================
-       CV — Style premium cohérent avec le portfolio
-       ============================================ */
-
-    :root {
-      --cream:     #faf7f2;
-      --white:     #ffffff;
-      --beige:     #f0e8d8;
-      --beige-mid: #e5d5c0;
-      --blush:     #e8c4b8;
-      --rose:      #c98b7d;
-      --rose-deep: #a86355;
-      --taupe:     #8a7060;
-      --brown:     #4a3728;
-      --text:      #3d2e24;
-      --text-light:#7a6558;
-
-      --radius-sm: 12px;
-      --radius-md: 20px;
-      --radius-lg: 32px;
-
-      --shadow-soft: 0 4px 24px rgba(74,55,40,0.08);
-      --shadow-card: 0 8px 40px rgba(74,55,40,0.12);
-      --shadow-hover: 0 20px 60px rgba(74,55,40,0.18);
-
-      --transition: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    body {
-      background: var(--cream);
-      font-family: 'DM Sans', sans-serif;
-      color: var(--text);
-      margin: 0;
-      padding: 40px 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .cv-container {
-      width: 900px;
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-card);
-      border: 1.5px solid rgba(200, 175, 155, 0.25);
-      display: grid;
-      grid-template-columns: 1fr 0.8fr;
-      overflow: hidden;
-    }
-
-    /* Colonne gauche */
-    .left-column {
-      padding: 40px 40px 60px;
-      background: var(--white);
-    }
-
-    .header-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem;
-      font-weight: 400;
-      color: var(--brown);
-    }
-
-    .header-subtitle {
-      font-size: 1rem;
-      color: var(--rose-deep);
-      margin-top: 6px;
-      font-weight: 500;
-    }
-
-    .header-line {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      margin-top: 4px;
-    }
-
-    .header-info {
-      margin-top: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      color: var(--taupe);
-      font-size: 0.9rem;
-    }
-
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 400;
-      color: var(--brown);
-      margin-top: 40px;
-      margin-bottom: 12px;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: "";
-      width: 40px;
-      height: 3px;
-      background: var(--rose);
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      border-radius: 10px;
-    }
-
-    .item-block {
-      margin-top: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(200, 175, 155, 0.25);
-    }
-
-    .item-title {
-      font-weight: 600;
-      color: var(--brown);
-      font-size: 1rem;
-    }
-
-    .item-subtitle {
-      font-size: 0.9rem;
-      color: var(--taupe);
-    }
-
-    .item-date {
-      font-size: 0.85rem;
-      color: var(--rose-deep);
-      margin-top: 4px;
-    }
-
-    .item-block ul {
-      margin-top: 8px;
-      padding-left: 20px;
-    }
-
-    .item-block li {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      margin-bottom: 4px;
-    }
-
-    /* Colonne droite */
-    .right-column {
-      background: rgba(240, 232, 216, 0.4);
-      padding: 40px 40px 60px;
-      border-left: 1.5px solid rgba(200, 175, 155, 0.25);
-    }
-
-    .atouts-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .atouts-list li {
-      background: var(--white);
-      padding: 10px 14px;
-      border-radius: var(--radius-sm);
-      border: 1.5px solid var(--beige-mid);
-      margin-bottom: 10px;
-      color: var(--text-light);
-      box-shadow: var(--shadow-soft);
-      transition: var(--transition);
-    }
-
-    .atouts-list li:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-      border-color: var(--rose);
-    }
-
-    .lang-item {
-      background: var(--white);
-      padding: 12px 16px;
-      border-radius: var(--radius-sm);
-      border: 1.5px solid var(--beige-mid);
-      color: var(--text-light);
-      box-shadow: var(--shadow-soft);
-      margin-top: 10px;
-    }
-
-    @media (max-width: 850px) {
-      .cv-container {
-        grid-template-columns: 1fr;
-      }
-
-      .right-column {
-        border-left: none;
-        border-top: 1.5px solid rgba(200, 175, 155, 0.25);
-      }
-    }
-  </style>
-
-</head>
-<body>
-
-  <div class="cv-container">
-
-    <!-- Colonne gauche -->
-    <div class="left-column">
-
-      <div class="header">
-        <div class="header-name">CONDE EYEGHE Paola</div>
-        <div class="header-subtitle">Étudiante en BTS SIO SLAM - Recherche d’une alternance en développement web</div>
-        <div class="header-line">3 jours en entreprise / 2 jours à l’école</div>
-        <div class="header-line">Formation Bac+1</div>
-
-        <div class="header-info">
-          <span>📍 91090 Lisses</span>
-          <span>📞 +33 7 58 07 06 18</span>
-          <span>📧 pcondeey@gmail.com</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CV – Paola Conde Eyeghe</title>
+        <link rel="stylesheet" href="cv.css">
+    </head>
+    <body>
+        <div class="cv-actions">
+            <a class="alt" href="index.html">← Retour au portfolio</a>
+            <button type="button" id="printCv">Imprimer / enregistrer en PDF</button>
         </div>
-      </div>
+        <div class="cv-container">
+            <div class="left-column">
+                <div class="header-name">Conde Eyeghe Paola</div>
+                <div class="header-subtitle">Étudiante en BTS SIO SLAM – Recherche d'un stage de 5 semaines</div>
+                <div class="header-line">3 jours en entreprise / 2 jours à l'école</div>
+                <div class="header-line">Formation Bac+2</div>
+                <div class="header-info">
+                    <span>📍 91000 Évry-Courcouronnes</span>
+                    <span>📞 +33 7 58 07 06 18</span>
+                    <span>📧 pcondeey@gmail.com</span>
+                </div>
 
-      <div class="section-title">Diplômes</div>
+                <div class="section-title">Diplômes</div>
+                <div class="item-block">
+                    <div class="item-title">BTS Services Informatiques aux Organisations (SIO)</div>
+                    <div class="item-subtitle">École INSTA, Paris</div>
+                    <div class="item-date">2025 – 2027</div>
+                </div>
+                <div class="item-block">
+                    <div class="item-title">BTS SIO (SLAM et SISR)</div>
+                    <div class="item-subtitle">
+                        <a href="https://ecoleiris.fr/paris" target="_blank" rel="noopener">École IRIS, Paris</a>
+                    </div>
+                    <div class="item-date">2024 – 2025</div>
+                </div>
+                <div class="item-block">
+                    <div class="item-title">Baccalauréat général (spécialités physique-chimie / SVT)</div>
+                    <div class="item-subtitle">Lycée Français Victor-Hugo, Port-Gentil (Gabon)</div>
+                    <div class="item-date">2023 – 2024</div>
+                </div>
 
-      <div class="item-block">
-        <div class="item-title">BTS Services Informatiques aux Organisations (SIO)</div>
-        <div class="item-subtitle">École INSTA, Paris</div>
-        <div class="item-date">2025–2027</div>
-      </div>
-
-      <div class="item-block">
-        <div class="item-title">BTS SIO (SLAM et SISR)</div>
-        <a href="https://ecoleiris.fr/paris" target="_blank">IRIS</a>
-        <div class="item-date">2024–2025</div>
-      </div>
-
-      <div class="item-block">
-        <div class="item-title">Baccalauréat Général (Physique-Chimie / SVT)</div>
-        <div class="item-subtitle">Lycée Français Victor-Hugo, Port-Gentil (Gabon)</div>
-        <div class="item-date">2023–2024</div>
-      </div>
-
-      <div class="section-title">Compétences professionnelles</div>
-
-      <div class="item-block">
-        <div class="item-title">Développement Web et Application</div>
-        <ul>
-          <li>Front-End : HTML, CSS, JavaScript, Bootstrap</li>
-          <li>Back-End : PHP, Symfony</li>
-        </ul>
-      </div>
-
-      <div class="item-block">
-        <div class="item-title">Outils et Environnement</div>
-        <ul>
-          <li>Support utilisateur : Assistance utilisateur, support technique</li>
-          <li>Système : Microsoft Windows</li>
-          <li>Gestion de versions : Git, GitHub</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Colonne droite -->
-    <div class="right-column">
-
-      <div class="section-title">Atouts</div>
-      <ul class="atouts-list">
-        <li>Gestion d’équipe</li>
-        <li>Compréhension rapide</li>
-        <li>Sens de l’organisation</li>
-        <li>Implication</li>
-      </ul>
-
-      <div class="section-title">Langues</div>
-      <div class="lang-item">Anglais B1 (En cours)</div>
-
-    </div>
-
-  </div>
-
-</body>
+                <div class="section-title">Compétences professionnelles</div>
+                <div class="item-block">
+                    <div class="item-title">Développement web et applications</div>
+                    <ul>
+                        <li>Front-end : HTML, CSS, JavaScript, Bootstrap</li>
+                        <li>Back-end : PHP, Symfony</li>
+                    </ul>
+                </div>
+                <div class="item-block">
+                    <div class="item-title">Outils et environnement</div>
+                    <ul>
+                        <li>Support utilisateur : assistance, support technique</li>
+                        <li>Système : Microsoft Windows</li>
+                        <li>Gestion de versions : Git, GitHub</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="section-title">Atouts</div>
+                <ul class="atouts-list">
+                    <li>Gestion d'équipe</li>
+                    <li>Compréhension rapide</li>
+                    <li>Sens de l'organisation</li>
+                    <li>Implication</li>
+                </ul>
+                <div class="section-title">Langues</div>
+                <div class="lang-item">Anglais B1</div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
 </html>
