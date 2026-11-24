@@ -2,255 +2,313 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Portfolio – Paola CONDE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Accueil – Portfolio Paola Conde Eyeghe</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="animations.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap"
+            rel="stylesheet">
     </head>
-
     <body>
-
-        <!-- Fond décoratif -->
-        <div class="bg-blobs">
-            <div class="blob blob1"></div>
-            <div class="blob blob2"></div>
-            <div class="blob blob3"></div>
-        </div>
-
-        <!-- NAVBAR -->
-        <nav class="navbar">
-            <div class="nav-logo">Paola CONDE</div>
-
-            <ul class="nav-links">
+        <nav class="navbar" id="navbar">
+            <a class="nav-logo" href="#accueil">P<span class="dot">.</span></a>
+            <ul class="nav-links" id="navLinks">
                 <li>
                     <a href="#accueil">Accueil</a>
                 </li>
                 <li>
-                    <a href="#apropos">À propos</a>
+                    <a href="#competences">Compétences</a>
                 </li>
                 <li>
                     <a href="#projets">Projets</a>
                 </li>
                 <li>
-                    <a href="#veille">Veille technologique</a>
+                    <a href="#bts">BTS SIO</a>
+                </li>
+                <li>
+                    <a href="veille.html">Veille techno</a>
+                </li>
+                <li>
+                    <a href="cv.html">CV</a>
                 </li>
                 <li>
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
-
-            <a href="cv.html" class="nav-cta">Mon CV</a>
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span></button>
         </nav>
 
-        <!-- ACCUEIL / HERO -->
-        <section id="accueil" class="hero">
-            <div class="hero-tag">Bienvenue</div>
-            <h1 class="hero-title">
-                <span class="line">Paola</span>
-                <span class="line italic">Développeuse Web</span>
-            </h1>
-            <p class="hero-sub">
-                Étudiante en BTS SIO SLAM, passionnée par le développement web.
-            </p>
-
-            <div class="hero-actions">
-                <a href="#projets" class="btn-primary">Voir mes projets</a>
-                <a href="#contact" class="btn-ghost">Me contacter</a>
+        <section class="hero" id="accueil">
+            <div class="hero-content">
+                <p class="hero-label">Étudiante BTS SIO option SLAM · INSTA Paris · 2025-2027</p>
+                <h1 class="hero-title">Paola<br>
+                    <span class="outline">Conde Eyeghe</span></h1>
+                <p class="hero-sub">Développeuse web en formation : HTML, CSS, JavaScript, PHP,
+                    Symfony et bases de données MySQL. Je cherche un stage de 5 semaines pour mettre
+                    ces compétences en pratique.</p>
+                <div class="hero-cta">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="cv.html" class="btn btn-outline">Mon CV</a>
+                    <a href="veille.html" class="btn btn-outline">Veille technologique</a>
+                </div>
+            </div>
+            <div class="code-card" aria-label="Résumé de mon profil sous forme de code">
+                <div class="code-bar">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <pre><code><span class="kw">const</span> paola = {
+  formation: <span class="str">"bts sio – option slam"</span>,
+  ecole:     <span class="str">"insta paris"</span>,
+  rythme:    <span class="str">"3 jours entreprise / 2 jours école"</span>,
+  stack: [<span class="str">"html/css"</span>, <span class="str">"js"</span>,
+          <span class="str">"php"</span>, <span class="str">"symfony"</span>, <span class="str">"mysql"</span>],
+  <span class="fn">passion</span>() { <span class="kw">return</span> <span class="str">"créer &amp; apprendre"</span>; }
+};</code></pre>
             </div>
         </section>
 
-        <!-- À PROPOS -->
-        <section id="apropos" class="section">
-            <div class="section-header">
-                <div class="section-tag">À propos</div>
-                <h2 class="section-title">Qui suis‑je ?</h2>
-            </div>
-
-            <p>
-                Je m'appelle
-                <strong>Paola CONDE</strong>, étudiante en BTS SIO option SLAM. Passionnée par
-                le développement web, j’aime me débrouiller pour créer des interfaces modernes,
-                élégantes et fonctionnelles. Mon objectif est de devenir développeuse web.
-            </p>
-
-            <p>
-                Je suis actuellement à la recherche d’un
-                <strong>stage de 5 semaines</strong>
-                afin de renforcer mes compétences et découvrir le monde professionnel.
-            </p>
-        </section>
-
-        <!-- PARCOURS SCOLAIRE -->
-        <section id="parcours" class="section">
-            <div class="section-header">
-                <div class="section-tag">Parcours scolaire</div>
-                <h2 class="section-title">Mon parcours</h2>
-            </div>
-
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2023 – 2024</div>
-                    <div class="timeline-content">
-                        <h3>Baccalauréat Général</h3>
-                        <p>Lycée Français Victor-Hugo, Port-Gentil (Gabon)</p>
+        <section class="about section-pad" id="a-propos">
+            <div class="container about-grid">
+                <div class="reveal">
+                    <span class="section-label">À propos</span>
+                    <h2>Qui suis-je&nbsp;?</h2>
+                    <p>Je m'appelle Paola Conde Eyeghe et je prépare le BTS Services Informatiques
+                        aux Organisations, option SLAM (Solutions Logicielles et Applications Métiers).
+                        </p>
+                    <p>J'aime construire des projets concrets qui
+                        associent design et fonctionnalités, et je m'appuie sur mes atouts : gestion
+                        d'équipe, compréhension rapide, sens de l'organisation et implication.</p>
+                    <div class="about-badges">
+                        <span class="badge">BTS SIO option SLAM</span><span class="badge">INSTA Paris</span><span class="badge">Anglais B1 (en cours)</span>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2024 – 2025</div>
-                    <div class="timeline-content">
-                        <h3>BTS SIO (SLAM/SISR)</h3>
-                        <p>École IRIS, Paris</p>
-                    </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <span class="stat-num">2</span><span class="stat-label">Projets réalisés</span></div>
+                    <div class="stat-card">
+                        <span class="stat-num">2</span><span class="stat-label">Années de BTS</span></div>
+                    <div class="stat-card">
+                        <span class="stat-num">6+</span><span class="stat-label">Technologies</span></div>
+                    <div class="stat-card">
+                        <span class="stat-num">1</span><span class="stat-label">Thème de veille</span></div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2025 – 2027</div>
-                    <div class="timeline-content">
-                        <h3>BTS SIO – Option SLAM</h3>
-                        <p>École INSTA, Paris</p>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-        <!-- CERTIFICATIONS -->
-        <section id="certifications" class="section">
-            <div class="section-header">
-                <div class="section-tag">Certifications</div>
-                <h2 class="section-title">Mes certifications</h2>
+        <section class="competences section-pad" id="competences">
+            <div class="container">
+                <span class="section-label reveal">Savoir-faire</span>
+                <h2 class="reveal">Compétences techniques</h2>
+                <div class="skills-grid">
+                    <div class="skill-category reveal">
+                        <h3>Langages web</h3>
+                        <div class="skill-item">
+                            <span>HTML / CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--pct:85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--pct:65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--pct:60%"></div>
+                            </div>
+                        </div>
+                        <ul class="tags">
+                            <li>Bootstrap</li>
+                            <li>Symfony</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category reveal">
+                        <h3>Bases de données</h3>
+                        <div class="skill-item">
+                            <span>MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--pct:60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>SQL (requêtes)</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--pct:65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>MCD</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--pct:50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal">
+                        <h3>Outils et méthodes</h3>
+                        <div class="skill-item">
+                            <span>VS Code</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--pct:80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Git / GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--pct:55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal">
+                        <h3>Environnements</h3>
+                        <div class="skill-item">
+                            <span>WAMP / XAMPP</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--pct:70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Windows</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--pct:80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Linux (bases)</span>
+                        </div>
+                        <ul class="tags">
+                            <li>Assistance utilisateur</li>
+                            <li>Support technique</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="certifs-grid">
+        <section class="projets section-pad" id="projets">
+            <div class="container">
+                <span class="section-label reveal">Réalisations</span>
+                <h2 class="reveal">Mes projets</h2>
+                <div class="projets-grid">
+                    <article class="projet-card reveal">
+                        <div class="projet-tag">HTML / CSS / JS</div>
+                        <h3>Site sur les langages de programmation</h3>
+                        <p>Site informatif présentant différents langages de programmation :
+                            définitions, vidéos explicatives et images de leurs créateurs. Réalisé en 1<sup>re</sup>
+                            année de BTS SIO (2024-2025) à l'école IRIS, Paris.</p>
+                        <div class="projet-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <a href="projet1.html" class="btn-sm">Voir le projet</a>
+                    </article>
+                    <article class="projet-card featured reveal">
+                        <span class="featured-badge">★ Projet phare</span>
+                        <div class="projet-tag">PHP / MySQL</div>
+                        <h3>Site e-commerce de peluches</h3>
+                        <p>Boutique en ligne de peluches pour tous les goûts, développée en PHP et MySQL
+                            : connexion utilisateur, catalogue de produits et gestion du panier. Le site
+                            n'est pas encore totalement opérationnel mais plusieurs fonctionnalités sont
+                            déjà disponibles.</p>
+                        <div class="projet-tech">
+                            <span>PHP</span><span>MySQL</span><span>HTML/CSS</span><span>JavaScript</span></div>
+                        <a href="projet2.html" class="btn-sm">Voir le projet</a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                <div class="card certif-card">
-                    <h3 class="card-title">CLAUDE 101</h3>
-
-                    <div class="certif-images">
-                        <img src="img/Capture d'écran 2026-06-11 151512.png" alt="Certification 1">
+        <section class="bts section-pad" id="bts">
+            <div class="container">
+                <span class="section-label reveal">Formation</span>
+                <h2 class="reveal">BTS SIO – option SLAM</h2>
+                <p class="bts-intro reveal">Le BTS Services Informatiques aux Organisations
+                    forme des techniciens supérieurs capables de répondre aux besoins informatiques
+                    des organisations. L'option SLAM se concentre sur la conception et le
+                    développement d'applications.</p>
+                <div class="bts-grid">
+                    <div class="bts-card reveal">
+                        <h3>Parcours</h3>
+                        <p>IRIS Paris (2024-2025), puis INSTA Paris (2025-2027). Rythme : 3 jours en
+                            entreprise, 2 jours à l'école.</p>
+                    </div>
+                    <div class="bts-card reveal">
+                        <h3>Épreuves E4, E5 et E6</h3>
+                        <p>Conception et maintenance de solutions informatiques, production et
+                            fourniture de services, cybersécurité. Ce portfolio présente mes preuves.</p>
+                    </div>
+                    <div class="bts-card reveal">
+                        <h3>Veille technologique</h3>
+                        <p>Suivi régulier de l'intelligence artificielle appliquée au développement.
+                            <a href="veille.html">Voir ma veille</a>
+                        </p>
+                    </div>
+                    <div class="bts-card reveal">
+                        <h3>Projets réalisés</h3>
+                        <p>Un site informatif en HTML/CSS/JS et un site e-commerce en PHP/MySQL.</p>
                     </div>
                 </div>
 
-                <div class="card certif-card">
-                    <h3 class="card-title">CLAUDE CODE 101</h3>
-
-                    <div class="certif-images">
-                        <img src="img/Capture d'écran 2026-06-11 154939.png" alt="Certification 2">
-                    </div>
-                </div>
-
-                <div class="card certif-card">
-                    <h3 class="card-title">PIX</h3>
-
-                    <div class="certif-images">
-                        <img src="img/Capture d'écran 2026-06-11 160203.png" alt="Certification 3">
-                    </div>
-                </div>
 
             </div>
         </section>
 
-        <!-- PROJETS -->
-        <section id="projets" class="section">
-            <div class="section-header">
-                <div class="section-tag">Projets</div>
-                <h2 class="section-title">Mes réalisations</h2>
-            </div>
-
-            <div class="projects-grid">
-                <a href="projet1.html" class="project-card" data-num="01">
-                    <div class="card-inner">
-                        <div class="card-tag">HTML / CSS / JS</div>
-                        <div class="card-title">Projet 1 – Site sur les langages</div>
-                        <div class="card-desc">Un site éducatif présentant différents langages de programmation.</div>
+        <section class="contact section-pad" id="contact">
+            <div class="container">
+                <span class="section-label reveal">Me contacter</span>
+                <h2 class="reveal">Travaillons ensemble</h2>
+                <div class="contact-grid">
+                    <div class="reveal">
+                        <p>Je recherche un stage de 5 semaines dans le développement web ou applicatif.
+                            N'hésitez pas à m'écrire.</p>
+                        <div class="contact-links">
+                            <a class="contact-item" href="mailto:pcondeey@gmail.com">✉ pcondeey@gmail.com</a>
+                            <span class="contact-item">📍 Évry-Courcouronnes (91090)</span>
+                            <a class="contact-item" href="cv.html">📄 Consulter mon CV</a>
+                        </div>
                     </div>
-                </a>
-
-                <a href="projet2.html" class="project-card" data-num="02">
-                    <div class="card-inner">
-                        <div class="card-tag">PHP / MySQL</div>
-                        <div class="card-title">Projet 2 – Site e‑commerce</div>
-                        <div class="card-desc">Un site de vente de peluches avec gestion de panier et connexion.</div>
-                    </div>
-                </a>
+                    <form class="contact-form reveal" id="contactForm" novalidate="novalidate">
+                        <div class="form-group">
+                            <label for="nom">Nom complet</label><input type="text" id="nom" name="nom" autocomplete="name" required="required"></div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label><input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required="required"></div>
+                        <div class="form-group">
+                            <label for="sujet">Sujet</label>
+                            <select id="sujet" name="sujet">
+                                <option>Proposition de stage</option>
+                                <option>Alternance</option>
+                                <option>Collaboration projet</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required="required"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                        <p class="form-msg" id="formMsg" role="status"></p>
+                    </form>
+                </div>
             </div>
         </section>
-
-        <!-- VEILLE TECHNOLOGIQUE -->
-        <section id="veille" class="section">
-            <div class="section-header">
-                <div class="section-tag">Veille technologique</div>
-                <h2 class="section-title">Veille : IA & Résumé automatique de texte</h2>
+        <footer class="footer">
+            <div class="container">
+                <p>©
+                    <span class="year"></span>
+                    Paola Conde Eyeghe – Portfolio BTS SIO SLAM</p>
             </div>
-
-            <!-- Bloc 1 : Thème -->
-            <div class="card">
-                <h3 class="card-title">Thème</h3>
-                <p class="card-desc">
-                    L’utilisation de l’intelligence artificielle pour générer automatiquement des
-                    résumés de textes (articles, mails, documents).
-                </p>
-            </div>
-
-            <!-- Bloc 2 : Comment je fais ma veille -->
-            <div class="card">
-                <h3 class="card-title">Comment je fais ma veille</h3>
-                <p class="card-desc">
-                    J’ai automatisé ma veille avec une
-                    <strong>Google Alert quotidienne</strong>
-                    sur les mots‑clés : “AI text summarization” et “IA résumé automatique”. Je
-                    reçois chaque jour un email avec les nouveautés liées au sujet.
-                </p>
-
-                <!-- Si tu veux ajouter des captures -->
-                <div class="veille-images">
-                    <img src="img/Capture d'écran 2026-06-11 132718.png" alt="Google Alert 1">
-                </div>
-            </div>
-
-            <!-- Bloc 3 : Pourquoi ce thème -->
-            <div class="card">
-                <h3 class="card-title">Pourquoi ce thème ?</h3>
-                <p class="card-desc">
-                    Ce sujet est simple, concret et très utilisé au quotidien. Il est volontairement
-                    précis et est un sujet utile car résumer des textes par IA est une action que
-                    beaucoup de personnes effectuent au quotidien.
-                </div>
-
-            </section>
-
-            <!-- CONTACT -->
-            <section id="contact" class="section">
-                <section id="contact" class="section">
-                    <div class="section-header">
-                        <div class="section-tag">Contact</div>
-                        <h2 class="section-title">Me contacter</h2>
-                    </div>
-
-                    <div class="contact-icons">
-                        <a
-                            href="https://www.linkedin.com/in/paola-conde-eyeghe-2413623b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                            target="_blank">
-                            <img src="img/linkedIn_PNG6.png" alt="LinkedIn">
-                        </a>
-
-                        <a href="https://github.com/pvolaa" target="_blank">
-                            <img src="img/github9775.jpg" alt="GitHub">
-                        </a>
-
-                        <a href="mailto:pcondeey@gmail.com">
-                            <img src="img/OIP.webp" alt="Email">
-                        </a>
-                    </div>
-                </section>
-
-                <form class="contact-form">
-                    <input type="text" placeholder="Votre nom" required="required">
-                    <input type="email" placeholder="Votre email" required="required">
-                    <textarea placeholder="Votre message" required="required"></textarea>
-                    <button type="submit" class="btn-primary">Envoyer</button>
-                </form>
-            </section>
-
-        </body>
-    </html>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</html>

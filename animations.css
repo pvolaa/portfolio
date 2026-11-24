@@ -1,0 +1,48 @@
+/* Apparition au défilement (déclenchée par js/main.js) */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease,transform 0.7s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+/* Barres de compétences : la largeur vient de --pct dans le HTML */
+.skill-fill {
+    transition: width 1.2s ease-out;
+}
+.skill-category.visible .skill-fill {
+    width: var(--pct);
+}
+/* Hero : une seule entrée au chargement */
+.hero-title {
+    animation: slide-in 0.9s ease both;
+}
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.btn,
+.btn-sm {
+    transition: transform 0.2s,background 0.2s;
+}
+@media (prefers-reduced-motion:reduce) {
+    * {
+        animation: none!important;
+        transition: none!important;
+    }
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+    .skill-fill {
+        width: var(--pct);
+    }
+}
